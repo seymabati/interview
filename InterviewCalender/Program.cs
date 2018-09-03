@@ -54,7 +54,7 @@ namespace InterviewCalender
                         try
                         {
                             createdUser = User.GetInstance((InterviewCalender.Common.EnumRole)(roleValue)).CreateUser(userName);
-                            Console.WriteLine("Your user id is: " + createdUser.ToString());
+                            Console.WriteLine("Created user. Your user id is: " + createdUser.ToString());
                         }
                         catch (Exception e)
                         {

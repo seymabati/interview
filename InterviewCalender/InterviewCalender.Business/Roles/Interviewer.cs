@@ -41,7 +41,6 @@ namespace InterviewCalender.InterviewCalender.Business.Roles
 
         public override int CreateUser(string userName)
         {
-            Console.WriteLine("Created User for Interviewer!!!!!");
             return UserDataRepository.CreateUser(userName, (short)EnumRole.Interviewer);
 
         }
