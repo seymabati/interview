@@ -114,45 +114,6 @@ namespace InterviewCalender
                 }
 
             }
-            TestResult();
-        }
-
-        private static void TestResult()
-        {
-            string sql2 = "select * from users";
-            using (var cnn = SqLiteBaseRepository.SimpleDbConnection())
-            {
-                cnn.Open();
-                SQLiteCommand command2 = new SQLiteCommand(sql2, cnn);
-                SQLiteDataReader reader = command2.ExecuteReader();
-                while (reader.Read())
-                    Console.WriteLine("Name: " + reader["user_name"] + "\tId: " + reader["id"] + "\tRole: " + reader["role"]);
-            }
-
-            string sql4 = "select * from available_time_slots";
-            using (var cnn = SqLiteBaseRepository.SimpleDbConnection())
-            {
-                cnn.Open();
-                SQLiteCommand command3 = new SQLiteCommand(sql4, cnn);
-                SQLiteDataReader reader = command3.ExecuteReader();
-                while (reader.Read())
-                    Console.WriteLine("user_id: " + reader["user_id"] + "\t start time: " + reader["start_time"] + "\tend time: " + reader["end_time"]);
-            }
-
-
-            string sql5 = "select * from requested_time_Slots";
-            using (var cnn = SqLiteBaseRepository.SimpleDbConnection())
-            {
-                cnn.Open();
-                SQLiteCommand command3 = new SQLiteCommand(sql5, cnn);
-                SQLiteDataReader reader = command3.ExecuteReader();
-                Console.WriteLine("candidate requests");
-                while (reader.Read())
-                    Console.WriteLine("user_id: " + reader["user_id"] + "\t start time: " + reader["start_time"] + "\tend time: " + reader["end_time"]);
-            }
-
-
-            Console.ReadLine();
         }
     }
 }
