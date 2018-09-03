@@ -12,7 +12,7 @@ namespace InterviewCalender.InterviewCalender.Data
     {
         public static string DbFile
         {
-            get { return "C:\\Users\\U078348\\source\\repos\\InterviewCalender\\DataModel\\bin\\Debug\\InterviewCalenderDB.sqlite"; }
+            get { return "InterviewCalenderDB.sqlite"; }
         }
 
         public static SQLiteConnection SimpleDbConnection()
