@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EAAC3B9E-8C10-4181-B12A-DF027FC79E43}</ProjectGuid>
+    <ProjectGuid>{5B1C1A29-4BDD-42ED-BE87-BBDDD11C4D74}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>InterviewCalender</RootNamespace>
-    <AssemblyName>InterviewCalender</AssemblyName>
+    <RootNamespace>DataModel</RootNamespace>
+    <AssemblyName>DataModel</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -53,6 +53,7 @@
     <Reference Include="System.Data.SQLite.Linq, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Data.SQLite.Linq.1.0.109.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
+    <Reference Include="System.Data.SqlXml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,16 +62,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InterviewCalender.Business\Roles\Candidate.cs" />
-    <Compile Include="InterviewCalender.Business\Roles\Interviewer.cs" />
-    <Compile Include="InterviewCalender.Business\Roles\User.cs" />
-    <Compile Include="InterviewCalender.Business\TimeSlot.cs" />
-    <Compile Include="InterviewCalender.Common\Enums\EnumRole.cs" />
-    <Compile Include="InterviewCalender.Common\Util.cs" />
-    <Compile Include="InterviewCalender.Data\Roles\AvailableTimeSlotsDataRepository.cs" />
-    <Compile Include="InterviewCalender.Data\Roles\RequestedTimeSlotsDataRepository.cs" />
-    <Compile Include="InterviewCalender.Data\Roles\UserDataRepository.cs" />
-    <Compile Include="InterviewCalender.Data\SqLiteBaseRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -78,7 +69,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.109.1\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.109.1\build\net46\System.Data.SQLite.Core.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
